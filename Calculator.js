@@ -27,7 +27,7 @@ export default class Calculator extends Component{
   }
   modifyNum(ip){
     let {num,onTopStackOp,calculatedValue} = this.state;
-    num = (num === '' && ip === 0) ? num='' : num = `${num}${ip}`
+    num = (num === '0' && ip === 0) ? num='0' : num = `${num}${ip}`
     if(onTopStackOp === ''){
       calculatedValue = '';
       this.setState({calculatedValue:calculatedValue});
@@ -125,7 +125,7 @@ export default class Calculator extends Component{
                 backgroundColor={'#4A90E2'}
                 textColor={'whitesmoke'}
               onTrigger  = {this.calcAns.bind(this)} />
-            
+
             </View>
           <View>
 
